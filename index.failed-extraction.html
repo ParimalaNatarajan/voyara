@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOYARA — Crafted by Shri Pro Craft | Luxury Travel Design</title>
+<meta name="description" content="Voyara designs private, once-only journeys for travelers who have already seen the guidebooks. Crafted by Shri Pro Craft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,300..700,0..1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="orb orb-4"></div>
+
+<header>
+  <div class="nav-shell glass" id="navShell">
+    <a href="#top" class="logo" id="navLogo">VOYARA</a>
+    <div class="nav-links">
+      <a href="#destinations">Destinations</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#enquiry">Enquire</a>
+    </div>
+    <a href="#enquiry" class="nav-cta">Begin a Journey</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="heroSection">
+    <div class="hero-photo" id="heroParallax">
+      <div class="photo-frame">
+        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1920&q=80" alt="Overwater villas in the Maldives at sunrise" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="chip-float chip-1"><img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=100&q=60" alt="" onerror="this.style.display='none'"> Santorini</div>
+    <div class="chip-float chip-2"><img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=100&q=60" alt="" onerror="this.style.display='none'"> Switzerland</div>
+    <div class="chip-float chip-3"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=100&q=60" alt="" onerror="this.style.display='none'"> Bali</div>
+
+    <div class="scroll-cue">Scroll to Explore</div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-top reveal in">
+        <div class="eyebrow-light">Private Travel Design</div>
+        <h1>Journeys, drawn <em>to your exact scale.</em></h1>
+        <p class="lede">Voyara designs private itineraries for travelers who have already read the guidebooks. Every route is built once, for one client, and never repeated — crafted by Shri Pro Craft.</p>
+        <div class="hero-actions">
+          <a href="#enquiry" class="btn-glass-cta">Begin a Journey →</a>
+          <a href="#destinations" class="btn-outline-light">View Destinations</a>
+        </div>
+      </div>
+
+      <div class="booking-widget glass-strong glass reveal in reveal-delay-2">
+        <div class="bw-field">
+          <label>Destination</label>
+          <input type="text" placeholder="Where to?">
+        </div>
+        <div class="bw-field">
+          <label>Dates</label>
+          <input type="text" placeholder="Add travel dates">
+        </div>
+        <div class="bw-field">
+          <label>Guests</label>
+          <input type="text" placeholder="2 Travelers">
+        </div>
+        <div class="bw-field">
+          <label>Style</label>
+          <input type="text" placeholder="Villas, Cruise…">
+        </div>
+        <button class="bw-search">Search →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat-bar glass reveal">
+        <div class="stat-item"><div class="stat-num"><span>312</span></div><div class="stat-label">Journeys Designed</div></div>
+        <div class="stat-item"><div class="stat-num"><span>41</span></div><div class="stat-label">Countries Reached</div></div>
+        <div class="stat-item"><div class="stat-num"><span>68%</span></div><div class="stat-label">Return Travelers</div></div>
+        <div class="stat-item"><div class="stat-num"><span>1</span></div><div class="stat-label">Concierge, Always</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations" id="destinations">
+    <div class="wrap">
+      <div class="explorer-head reveal">
+        <div class="section-eyebrow">Explore Destinations</div>
+        <h2>Where will your <em>story begin?</em></h2>
+        <p>Six handcrafted worlds, each built by hand rather than pulled from a catalog. Turn the stack, and let the one that pulls at you set the itinerary.</p>
+      </div>
+
+      <div class="voy-wrap reveal">
+        <div class="voy-panel glass">
+          <div class="voy-bg">
+            <div class="voy-bg-layer" id="voyBgA"></div>
+            <div class="voy-bg-layer" id="voyBgB"></div>
+            <div class="voy-bg-tint"></div>
+          </div>
+          <button class="voy-arrow voy-prev" aria-label="Previous destination">‹</button>
+          <div class="voy-stage" id="voyStage"></div>
+          <button class="voy-arrow voy-next" aria-label="Next destination">›</button>
+          <div class="voy-info glass-strong glass" id="voyInfo"></div>
+        </div>
+
+        <div class="voy-thumbs" id="voyThumbs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATION EXPAND MODAL -->
+  <div class="voy-modal" id="voyModal">
+    <div class="voy-modal-backdrop" id="voyModalBackdrop"></div>
+    <div class="voy-modal-panel">
+      <div class="voy-modal-hero">
+        <div class="photo-frame" id="voyModalHeroPhoto"></div>
+        <div class="voy-modal-hero-shade"></div>
+        <button class="voy-modal-close" id="voyModalClose" aria-label="Close">✕</button>
+        <div class="voy-modal-hero-title">
+          <div class="voy-card-country" id="voyModalCountry"></div>
+          <h3 id="voyModalName"></h3>
+        </div>
+      </div>
+      <div class="voy-modal-body">
+        <p class="lead" id="voyModalDesc"></p>
+        <div class="voy-modal-gallery" id="voyModalGallery"></div>
+        <div class="voy-modal-grid">
+          <div class="voy-modal-block">
+            <h4>Journey Highlights</h4>
+            <ul id="voyModalHighlights"></ul>
+          </div>
+          <div class="voy-modal-block">
+            <h4>Sample Itinerary</h4>
+            <ul id="voyModalItinerary"></ul>
+          </div>
+        </div>
+        <button class="voy-modal-cta" id="voyModalCta">Request This Route →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCES -->
+  <section class="experiences" id="experiences">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-eyebrow">Premium Experiences</div>
+          <h2 class="section-title">Ways to move through <em>a destination</em></h2>
+        </div>
+      </div>
+      <div class="explr reveal" id="explr">
+        <div class="explr-stage" id="explrStage" tabindex="0" aria-roledescription="carousel" aria-label="Premium experiences">
+          <div class="explr-glow"></div>
+          <div class="explr-track" id="explrTrack">
+            <article class="explr-card" data-index="0">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=900&q=80" alt="Private villa infinity pool" onerror="this.style.display='none'"></div>
+              <div class="explr-shade"></div>
+              <div class="explr-glass glass">
+                <span class="explr-badge">🏛️</span>
+                <h3>Private Villas</h3>
+                <p>Whole-estate stays, staffed and closed to other guests.</p>
+                <div class="explr-stats">
+                  <div><strong>32</strong><small>Curated Estates</small></div>
+                  <div><strong>$2,900</strong><small>From / Night</small></div>
+                  <div><strong>4.9 ★</strong><small>Guest Rating</small></div>
+                </div>
+                <a href="#enquiry" class="explr-cta">Explore Collection <span>→</span></a>
+              </div>
+            </article>
+            <article class="explr-card" data-index="1">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=900&q=80" alt="Luxury yacht at sea" onerror="this.style.display='none'"></div>
+              <div class="explr-shade"></div>
+              <div class="explr-glass glass">
+                <span class="explr-badge">⛵</span>
+                <h3>Luxury Cruises</h3>
+                <p>Small-vessel charters along coastlines, not cruise lanes.</p>
+                <div class="explr-stats">
+                  <div><strong>18</strong><small>Private Charters</small></div>
+                  <div><strong>$4,600</strong><small>From / Voyage</small></div>
+                  <div><strong>4.8 ★</strong><small>Guest Rating</small></div>
+                </div>
+                <a href="#enquiry" class="explr-cta">Explore Collection <span>→</span></a>
+              </div>
+            </article>
+            <article class="explr-card" data-index="2">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80" alt="Hiker overlooking misty mountains" onerror="this.style.display='none'"></div>
+              <div class="explr-shade"></div>
+              <div class="explr-glass glass">
+                <span class="explr-badge">⛰️</span>
+                <h3>Mountain Escapes</h3>
+                <p>Alpine lodges and guided routes into quiet high country.</p>
+                <div class="explr-stats">
+                  <div><strong>24</strong><small>Alpine Lodges</small></div>
+                  <div><strong>$2,150</strong><small>From / Night</small></div>
+                  <div><strong>4.9 ★</strong><small>Guest Rating</small></div>
+                </div>
+                <a href="#enquiry" class="explr-cta">Explore Collection <span>→</span></a>
+              </div>
+            </article>
+            <article class="explr-card" data-index="3">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Infinity pool overlooking the ocean" onerror="this.style.display='none'"></div>
+              <div class="explr-shade"></div>
+              <div class="explr-glass glass">
+                <span class="explr-badge">🌊</span>
+                <h3>Resort Escapes</h3>
+                <p>Ocean-facing suites at properties we know personally.</p>
+                <div class="explr-stats">
+                  <div><strong>40</strong><small>Ocean Suites</small></div>
+                  <div><strong>$1,980</strong><small>From / Night</small></div>
+                  <div><strong>4.7 ★</strong><small>Guest Rating</small></div>
+                </div>
+                <a href="#enquiry" class="explr-cta">Explore Collection <span>→</span></a>
+              </div>
+            </article>
+          </div>
+          <button class="explr-arrow explr-prev" id="explrPrev" aria-label="Previous experience">‹</button>
+          <button class="explr-arrow explr-next" id="explrNext" aria-label="Next experience">›</button>
+        </div>
+        <div class="explr-nav" id="explrNav"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY (glass over photo) -->
+  <section class="philosophy" id="philosophy">
+    <div class="wrap">
+      <div class="phil-shell reveal">
+        <div class="photo-frame"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80" alt="Calm mountain lake at sunrise" onerror="this.style.display='none'"></div>
+        <div class="phil-content">
+          <div class="section-eyebrow">How We Work</div>
+          <h2 class="section-title">Three ways we differ from <em>a booking platform</em></h2>
+          <div class="phil-cards">
+            <div class="phil-card glass">
+              <span class="edge-light"></span>
+              <span class="phil-mark">Principle</span>
+              <h3>Built Once</h3>
+              <p>No template itineraries — every route begins from a blank map, drawn around one traveler's pace and taste.</p>
+            </div>
+            <div class="phil-card glass">
+              <span class="edge-light"></span>
+              <span class="phil-mark">Principle</span>
+              <h3>Ground-Level Access</h3>
+              <p>Relationships with private guides, chefs, and estate owners, built over years — not booked through a marketplace.</p>
+            </div>
+            <div class="phil-card glass">
+              <span class="edge-light"></span>
+              <span class="phil-mark">Principle</span>
+              <h3>One Concierge, Always</h3>
+              <p>A single point of contact designs the route and stays reachable for the full length of the journey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / EDITORIAL SPLIT -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-photo reveal">
+        <div class="photo-frame"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Tropical beach with palm trees" onerror="this.style.display='none'"></div>
+        <div class="story-badge glass">
+          <div class="story-badge-num">14</div>
+          <div class="story-badge-text">Days<br>Route 014</div>
+        </div>
+      </div>
+      <div class="story-text reveal reveal-delay-1">
+        <div class="section-eyebrow">Route 014 — A Sample Itinerary</div>
+        <h2>Fourteen days, <em>drawn day by day.</em></h2>
+        <p>Below is one way Route 014 has been built for a past traveler. Yours would be entirely its own — this exists only to show how a journey gets assembled, stop by stop.</p>
+        <div class="story-list">
+          <div class="story-list-item"><span class="story-list-dot"></span> Days 1–4 · Kyoto, a private machiya and a restoration guide</div>
+          <div class="story-list-item"><span class="story-list-dot"></span> Days 5–9 · Lake Como, a lakeside villa with a private boat</div>
+          <div class="story-list-item"><span class="story-list-dot"></span> Days 10–14 · Positano, a cliffside suite and a closed-door dinner</div>
+        </div>
+        <div class="hero-actions" style="margin-top:32px;">
+          <a href="#enquiry" class="btn-outline-light" style="color:var(--ocean-deep); border-color:rgba(30,60,75,0.25);">Request a Similar Route →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-eyebrow">The Gallery</div>
+          <h2 class="section-title">A few frames from <em>recent journeys</em></h2>
+          <p class="journal-sub">Unforgettable places, quiet moments, and stories that stay long after the journey ends.</p>
+        </div>
+      </div>
+
+      <div class="journal reveal" id="journal">
+        <div class="jflow-grid" id="jflowGrid">
+          <div class="jflow-row">
+            <button class="jflow-card r1 h-sm" data-index="0" aria-label="Open memory: Into the Blue">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Diver among a school of reef fish" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Maldives</div>
+                <div class="jflow-title-row"><span class="jflow-title">Into the Blue</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 02</span>
+              </div>
+            </button>
+            <button class="jflow-card r2 h-lg" data-index="1" aria-label="Open memory: Where Water Meets Sky">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1200&q=80" alt="Maldives overwater villas" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Maldives</div>
+                <div class="jflow-title-row"><span class="jflow-title">Where Water Meets Sky</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 03</span>
+              </div>
+            </button>
+            <button class="jflow-card r3 h-md" data-index="2" aria-label="Open memory: Calm in the Mountains">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Rowboat on a still alpine lake, Dolomites" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Dolomites, Italy</div>
+                <div class="jflow-title-row"><span class="jflow-title">Calm in the Mountains</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 05</span>
+              </div>
+            </button>
+          </div>
+          <div class="jflow-row">
+            <button class="jflow-card r4 h-lg" data-index="3" aria-label="Open memory: Sailing into Blue">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1200&q=80" alt="Aerial view of a marina with yachts" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Bahamas</div>
+                <div class="jflow-title-row"><span class="jflow-title">Sailing into Blue</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 04</span>
+              </div>
+            </button>
+            <button class="jflow-card r5 h-md" data-index="4" aria-label="Open memory: Land of Silence">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1531168556467-80aace0d0144?auto=format&fit=crop&w=800&q=80" alt="Moss-covered canyon, Iceland" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Iceland</div>
+                <div class="jflow-title-row"><span class="jflow-title">Land of Silence</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 06</span>
+              </div>
+            </button>
+            <button class="jflow-card r6 h-lg" data-index="5" aria-label="Open memory: Evenings Like These">
+              <div class="photo-frame"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80" alt="Poolside pergola at sunset, Bali" onerror="this.style.display='none'"></div>
+              <div class="jflow-shade"></div>
+              <div class="jflow-label">
+                <div class="jflow-loc">📍 Bali</div>
+                <div class="jflow-title-row"><span class="jflow-title">Evenings Like These</span><span class="jflow-arrow">→</span></div>
+                <span class="jflow-day">Day 01</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- lightbox: image + story + details -->
+    <div class="jflow-lightbox" id="jflowLightbox">
+      <div class="jflow-lightbox-backdrop" id="jflowLightboxBackdrop"></div>
+      <div class="jflow-lightbox-panel">
+        <button class="jflow-lightbox-close" id="jflowLightboxClose" aria-label="Close">✕</button>
+        <div class="jflow-lightbox-photo"><img id="jlImg" src="" alt=""></div>
+        <div class="jflow-lightbox-body">
+          <div class="journal-meta-row">
+            <span class="jf-loc" id="jlLoc"></span>
+            <span class="jf-dot"></span>
+            <span class="jf-day" id="jlDay"></span>
+          </div>
+          <h3 id="jlTitle"></h3>
+          <p id="jlStory"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="wrap">
+      <div class="test-exhibit reveal" id="testExhibit">
+        <div class="test-bg-photo" aria-hidden="true"></div>
+        <div class="test-bg-tint" aria-hidden="true"></div>
+        <div class="test-atmos" aria-hidden="true">
+          <div class="test-atmos-orb a"></div>
+          <div class="test-atmos-orb b"></div>
+          <div class="test-atmos-orb c"></div>
+          <div class="test-corner-light"></div>
+          <div class="test-vignette"></div>
+          <div class="test-grain"></div>
+        </div>
+        <div class="section-head">
+          <div>
+            <div class="section-eyebrow">From the Journal</div>
+            <h2 class="section-title">Notes from <em>past travelers</em></h2>
+          </div>
+        </div>
+        <div class="test-stack" id="testStack">
+        <div class="test-stack-viewport" id="testViewport">
+          <div class="test-card glass" data-index="0">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="test-quote">"They never once asked what was 'included.' They asked what we actually wanted, then built around it."</p>
+            </div>
+            <div class="test-person">
+              <div class="test-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="" onerror="this.style.display='none'"></div>
+              <div><div class="test-name">Elena R.</div><div class="test-route">Route 027 — Amalfi &amp; Como</div></div>
+            </div>
+          </div>
+          <div class="test-card glass" data-index="1">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="test-quote">"Our concierge answered a message at 2am local time in Marrakech. That's the whole difference, really."</p>
+            </div>
+            <div class="test-person">
+              <div class="test-avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="" onerror="this.style.display='none'"></div>
+              <div><div class="test-name">David K.</div><div class="test-route">Route 041 — Marrakech</div></div>
+            </div>
+          </div>
+          <div class="test-card glass" data-index="2">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="test-quote">"Nothing about the trip felt bought off a shelf. It felt like it had been made for exactly us."</p>
+            </div>
+            <div class="test-person">
+              <div class="test-avatar"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="" onerror="this.style.display='none'"></div>
+              <div><div class="test-name">Priya M.</div><div class="test-route">Route 014 — Kyoto</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="test-stack-nav">
+          <button class="test-nav-btn" id="testPrev" aria-label="Previous testimonial">‹</button>
+          <div class="test-dots" id="testDots"></div>
+          <button class="test-nav-btn" id="testNext" aria-label="Next testimonial">›</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section class="enquiry" id="enquiry">
+    <div class="wrap">
+      <div class="enquiry-shell reveal">
+        <div class="photo-frame"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80" alt="Norwegian fjord at dusk" onerror="this.style.display='none'"></div>
+        <div class="enquiry-inner">
+          <div class="enquiry-left">
+            <h2>Tell us where, <em>we'll work out how.</em></h2>
+            <p>Enquiries are answered by a person, not a queue — usually within one business day. There's no cost or obligation to start the conversation.</p>
+          </div>
+          <div class="enquiry-form glass-strong glass">
+            <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='Enquiry Sent ✓';">
+              <div class="form-row">
+                <div class="field"><label for="name">Full Name</label><input id="name" type="text" placeholder="Your name" required></div>
+                <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com" required></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="dest">Destination In Mind</label><input id="dest" type="text" placeholder="e.g. Japan, undecided"></div>
+                <div class="field"><label for="window">Travel Window</label><input id="window" type="text" placeholder="e.g. March 2027"></div>
+              </div>
+              <div class="field" style="margin-bottom:16px;">
+                <label for="msg">A Little About the Trip</label>
+                <textarea id="msg" placeholder="Who's traveling, and what does the trip need to feel like?"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Submit Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">VOYARA <span>Crafted by Shri Pro Craft</span></a>
+        <p>Private itinerary design for travelers who want ground-level access, not a package tour.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <a href="#">About</a>
+        <a href="#">Concierge Team</a>
+        <a href="#">Press</a>
+        <a href="#enquiry">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Informed</h4>
+        <div class="newsletter"><input type="email" placeholder="Your email"><button>Join</button></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Voyara — Crafted by Shri Pro Craft. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="https://shriprocraft.com/" target="_blank" rel="noopener">Powered by Shri Pro Craft</a></div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!--
+  ============================================================
+  GHOST CURSOR — soft, brand-matched cursor trail
+  Isolated module: its own scope, its own canvas, no shared
+  state with the rest of the page. Safe to delete this canvas
+  element + this 
+
+<script src="js/script.js"></script>
+</body>
+</html>
